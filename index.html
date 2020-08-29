@@ -1,0 +1,179 @@
+<!-- see bootstrap for layout design -->
+<!-- 38:50 -->
+
+<html>
+  <head> 
+
+   <link 
+   href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.1/css/bootstrap.min.css" 
+rel="stylesheet">
+
+  <link 
+  href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" 
+  rel="stylesheet">
+
+  <!--FONT-->
+  <link 
+  href="https://fonts.googleapis.com/css2?family=Londrina+Solid:wght@100&display=swap" 
+  rel="stylesheet">
+
+  <!-- adds background picture-->  
+  <style> /*css*/
+    
+    html,
+    body {
+      font-family: 'Indie Flower';
+    }
+
+    .container-fluid { 
+      background: url('https://img.wallpapersafari.com/desktop/1280/1024/69/17/aJcgXZ.jpg');
+      background-position: fit;
+      background-repeat: no-repeatcente;
+      background-size: 100% 96%; /*width %, height % of wallpaper*/
+    }
+
+    .col { 
+      height: 100vh;
+    }
+
+   /*background picture of log in*/ 
+   #wrapper {
+     /*background-color: pink; */
+     background: url('https://c4.wallpaperflare.com/wallpaper/175/985/284/abstract-3d-digital-art-dark-wallpaper-preview.jpg');
+     padding: 21px;
+     text-transform: uppercase;
+     width: 400px;
+   }
+
+   
+   h3 {  
+     color: #ac636a;  /*<!-- centers the 'Member Login' title -->*/
+     margin-bottom: 21px;
+     text-align: center;
+   }
+
+   .input-group {
+     width: 100%;
+   }
+
+   /*need height & width for the icon picture; with grey box color*/
+   input,  
+   .icon-wrapper {
+     height: 40px; /*icon height*/
+   }
+
+   .icon-wrapper {
+     align-items: center; /*centers the text icons*/
+     background-color: rgb(77, 69, 69); /*icon background color*/ 
+     display: flex; 
+     justify-content: center;
+     width: 40px; /*icon width*/
+   }
+
+   .icon-wrapper i {
+     color: #39080f; /*icon colors*/
+     font-size: 21px; /*icon size*/
+   }
+
+   input {
+     background-color: lightgrey;
+     color: blue; /* <!-- color of the typing when entering username & password --> */
+     border: none;
+     /*<!-- color: #ccc; --> <!-- color of text input --> */
+     margin-bottom: 15px; /*space between blocks*/
+     padding: 9px;
+     width: calc(100% - 40px);
+   }
+
+   button:hover {
+     background-color: rgb(126, 5, 5);
+   }
+
+   input::placeholder {
+     color: #919da9; /* <! -- color of the username & password input--> */
+   }
+
+   button {  /* login button */
+     border: none;
+     display: block;
+     margin: 0 auto;
+     margin-bottom: 15px;
+     padding: 9px;
+     text-transform: uppercase;
+     width: 70%; /* width of login icon */
+     }
+
+     /*centers the 'forgot password' section*/
+     #forgot-password {
+       color: #98a6b3; /*text color for -> 'Forgot Password? Click Here'*/
+       text-align: center;
+       text-transform: capitalize;
+      
+     }
+     
+     /*underlines the 'Click here' words*/
+     #forgot-password span {
+       text-decoration: underline;
+     }  
+
+     hr {
+       margin-bottom: 30px;
+       margin-top: 30px;
+     }
+
+     register-button {
+       background-color: aqua;
+     }
+    </style>
+
+  </head>
+
+  <body>
+   <!-- Need a container parent, using 'container' or 'container-fluid' -->
+   <div class="container-fluid">  <!-- spreads the paragraphs out-->
+
+    <!-- rows & columns for layout, like a tale -->
+    <div class="row">  
+     <div class="col d-flex align-items-center justify-content-center"> <!--centers the ui login-->
+      <div id="wrapper">
+       <h3>User Login</h3>
+
+       <!--creates an icon box for the login-->
+        <div class="input-group">
+          <div class="icon-wrapper">
+            <i class='fa fa-user-circle-o'></i>
+          </div>
+
+          <input placeholder="Username">
+        </div>
+
+
+        <div class="input-group">
+          <div class="icon-wrapper">
+            <i class='fa fa-exclamation-triangle'></i>
+          </div>
+
+       <!--<input placeholder="Password">-->
+
+       <!--hides password input-->
+       <input placeholder="Password" type="Password" value="FakePSW" id="myInput"> 
+       </div>
+
+       <!-- adding class='d-block' will place button below the password line; not on the same line -->
+       <button class="d-block">Login</button> 
+
+       <p id="forgot-password">Forgot password?
+         <span>Click here</span>
+         </p>
+
+       <hr> <!-- adds a horizontal line -->
+
+       <button id='register-button'>Create Account</button>
+
+  
+      </div>
+     </div>
+   </div>
+  </div>
+  </body>
+</html>
